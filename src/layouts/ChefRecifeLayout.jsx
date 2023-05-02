@@ -1,10 +1,9 @@
 import React from 'react';
 import Header from '../pages/Header/Header';
 import { Outlet } from 'react-router-dom';
-import Banner from '../pages/Banner/Banner';
 import Footer from '../pages/Footer/Footer';
 
-const Main = () => {
+const ChefRecifeLayout = () => {
     return (
         <div>
             <Header></Header>
@@ -14,4 +13,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default ChefRecifeLayout;

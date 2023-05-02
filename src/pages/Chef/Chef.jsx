@@ -18,7 +18,7 @@ const Chef = ({chef}) => {
                     </div>
                        <p><FaHandPointRight />: {likes} Likes</p>
                  </Card.Text>
-                 <Link to=""><Button variant="outline-secondary">View Recipes</Button></Link>
+                 <Link to={`/chefrecipe/${id}`}><Button variant="outline-secondary">View Recipes</Button></Link>
                </Card.Body>
             </Card>
         </div>
