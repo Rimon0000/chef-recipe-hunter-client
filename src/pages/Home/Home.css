@@ -3,3 +3,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
+  /* responsive  */
+  @media only screen and (max-width: 576px) {
+    .chef-container{
+        grid: none;
+    }
+   
+  }

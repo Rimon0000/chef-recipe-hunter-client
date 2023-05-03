@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../Header/Header';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { Card, Container } from 'react-bootstrap';
-import { FaHandPointRight } from 'react-icons/fa';
+import { FaHandPointRight, FaRegThumbsUp } from 'react-icons/fa';
 import Recipes from '../Recipes/Recipes';
 
 const ChefRecipe = () => {
@@ -24,7 +24,7 @@ const ChefRecipe = () => {
                        <p className='fw-bold'>Experience: <span className='fw-semibold'>{years_of_experience} years</span></p>
                        <p className='fw-bold'>Number of Recipes: <span className='fw-semibold'>{num_of_recipes}</span></p>
                     </div>
-                       <p className='fw-bold'><FaHandPointRight />: <span>{likes} Likes</span></p>
+                       <p className='fw-bold'><FaRegThumbsUp />: <span>{likes} Likes</span></p>
                 </Card.Text>
              </Card.Body>
              </Card>

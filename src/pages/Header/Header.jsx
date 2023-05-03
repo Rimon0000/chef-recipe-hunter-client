@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Card, Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import { AuthContext } from '../../providers/AuthProvider';
-import 'react-tooltip/dist/react-tooltip.css'
+
+
 
 
 
@@ -40,16 +41,7 @@ const Header = () => {
                       <Nav.Link href="#link">
                         <Link className='text-decoration-none' to="/register">Register</Link>
                       </Nav.Link>
-                      
-                      
-                      
-                      
                     </Nav>
-                    {/* {user && <Nav>
-                      <Nav.Link href="#link">
-                      <FaUserCircle style={{fontSize: "2rem"}}></FaUserCircle>
-                      </Nav.Link>
-                    </Nav>} */}
                   </Navbar.Collapse>
                   {
                     

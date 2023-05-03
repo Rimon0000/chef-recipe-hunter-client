@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Chef from '../Chef/Chef';
 import "./Home.css"
 import Banner from '../Banner/Banner';
+import Review from '../Review/Review';
 
 const Home = () => {
     const [chefs, setChefs] = useState([])
@@ -28,6 +29,7 @@ const Home = () => {
                 }
             </div>
         </Container>
+        <Review></Review>
         </>
     );
 };

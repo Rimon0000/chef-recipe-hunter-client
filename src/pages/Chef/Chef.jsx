@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { FaHandPointRight } from 'react-icons/fa';
+import { FaHandPointRight, FaRegThumbsUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Chef = ({chef}) => {
@@ -16,7 +16,7 @@ const Chef = ({chef}) => {
                        <p className='fw-semibold'>Experience: {years_of_experience} years</p>
                        <p>Number of Recipes: {num_of_recipes}</p>
                     </div>
-                       <p><FaHandPointRight />: {likes} Likes</p>
+                       <p><FaRegThumbsUp />: {likes} Likes</p>
                  </Card.Text>
                  <Link to={`/chefrecipe/${id}`}><Button variant="outline-secondary">View Recipes</Button></Link>
                </Card.Body>
