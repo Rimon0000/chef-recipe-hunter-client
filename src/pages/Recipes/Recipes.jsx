@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { FaBookmark, FaHandPointRight } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Recipes = ({recipe}) => {
+    const [buttonVisible, setButtonVisible] = useState(true)
+
+    const notify = () => {
+        setButtonVisible(false)
+        toast("This recipe added your favourite dish!");
+    }
+  
+    
     const {id, chef_picture, chef_name,years_of_experience,num_of_recipes,likes, bio, recipes} = recipe
+
     return (
         <>
           <Container>
@@ -24,7 +35,12 @@ const Recipes = ({recipe}) => {
                          </Card.Body>
                          <Card.Footer className='d-flex align-items-center'>
                                <p className='fw-bold flex-grow-1 mt-2'>Ratings: <span className='fw-semibold'>{`${recipes[0].rating}`}</span></p>
-                               <FaBookmark style={{fontSize:"1.5rem"}}/>
+                               {
+                                buttonVisible && (
+                                    <FaBookmark onClick={notify} style={{fontSize:"1.5rem"}}/>
+                                )
+                               }
+                               <ToastContainer />
                          </Card.Footer>
                     </Card>
                     </Container>
@@ -44,7 +60,11 @@ const Recipes = ({recipe}) => {
                          </Card.Body>
                          <Card.Footer className='d-flex align-items-center'>
                                <p className='fw-bold flex-grow-1 mt-2'>Ratings: <span className='fw-semibold'>{`${recipes[1].rating}`}</span></p>
-                               <FaBookmark style={{fontSize:"1.5rem"}}/>
+                               {
+                                buttonVisible && (
+                                    <FaBookmark onClick={notify} style={{fontSize:"1.5rem"}}/>
+                                )
+                               }
                          </Card.Footer>
                     </Card>
                     </Container>
@@ -64,7 +84,11 @@ const Recipes = ({recipe}) => {
                          </Card.Body>
                          <Card.Footer className='d-flex align-items-center'>
                                <p className='fw-bold flex-grow-1 mt-2'>Ratings: <span className='fw-semibold'>{`${recipes[2].rating}`}</span></p>
-                               <FaBookmark style={{fontSize:"1.5rem"}}/>
+                               {
+                                buttonVisible && (
+                                    <FaBookmark onClick={notify} style={{fontSize:"1.5rem"}}/>
+                                )
+                               }
                          </Card.Footer>
                     </Card>
                     </Container>

@@ -6,29 +6,11 @@ import ChefRecifeLayout from "../layouts/ChefRecifeLayout";
 import LoginLayout from "../layouts/LoginLayout";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
 
-// const router = createBrowserRouter([
-//     {
-//       path: "/",
-//       element:<Main></Main>,
-//       children: [
-//         {
-//             path: "/",
-//             element:<Home></Home>
-//         },
-//       ]
-//     },
-//     {
-//       path:"/chefrecipe",
-//       element:<ChefRecifeLayout></ChefRecifeLayout>
-//     },
-//     {
-//       path:"/chefrecipe/:id",
-//       element:<ChefRecipe></ChefRecipe>
-//     }
-//   ]);
+
 
 
 
@@ -36,6 +18,7 @@ import Register from "../pages/Register/Register";
     {
       path: "/",
       element: <Main></Main>,
+      errorElement:<ErrorPage></ErrorPage>,
       children: [
         {
           path: '/',
