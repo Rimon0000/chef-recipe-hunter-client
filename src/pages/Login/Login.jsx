@@ -17,6 +17,10 @@ const Login = () => {
                   <Form.Label>Password</Form.Label>
                   <Form.Control type="password" name='password' placeholder="Password" required/>
                 </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Confirm Password</Form.Label>
+                  <Form.Control type="password" name='confirm' placeholder="Confirm Password" required/>
+                </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                   <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
