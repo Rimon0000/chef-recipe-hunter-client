@@ -6,7 +6,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
-  const {signIn, googleLogin} = useContext(AuthContext)
+  const {signIn, googleLogin, GithubLogin} = useContext(AuthContext)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
 
@@ -52,6 +52,18 @@ const Login = () => {
     .catch(error =>{
       console.log(error)
     })
+  }
+
+  //github login
+  const handleGithubSignIn = () =>{
+    GithubLogin()
+    .then(result =>{
+        const loggedInUser = result.user
+        console.log(loggedInUser)
+    })
+    .catch(error =>{
+        console.log(error)
+    })
 }
 
     return (
@@ -86,7 +98,7 @@ const Login = () => {
             </Form>
             <div>
               <Link><Button onClick={handleGoogleLogin} variant="outline-secondary" className='fw-semibold m-2'><FaGoogle style={{color:"red"}}/> Google Login</Button></Link>
-              <Link><Button variant="outline-secondary" className='fw-semibold'><FaGithub style={{color:"black"}}/> Github Login</Button></Link>
+              <Link><Button onClick={handleGithubSignIn} variant="outline-secondary" className='fw-semibold'><FaGithub style={{color:"black"}}/> Github Login</Button></Link>
             </div>
         </Container>
     );

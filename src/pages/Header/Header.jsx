@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Card, Container, Image, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import { AuthContext } from '../../providers/AuthProvider';
+import 'react-tooltip/dist/react-tooltip.css'
+
+
 
 const Header = () => {
   const {user, logOut} = useContext(AuthContext)
@@ -29,34 +32,39 @@ const Header = () => {
                         <Link className='text-decoration-none' to="/">Home</Link>
                       </Nav.Link>
                       <Nav.Link href="#link">
-                        <Link className='text-decoration-none'>Blog</Link>
+                        <Link className='text-decoration-none' to="/blog">Blog</Link>
                       </Nav.Link>
+                      <Nav.Link href="#link">
+                        <Link className='text-decoration-none' to="/login">Login</Link>
+                      </Nav.Link>
+                      <Nav.Link href="#link">
+                        <Link className='text-decoration-none' to="/register">Register</Link>
+                      </Nav.Link>
+                      
+                      
                       
                       
                     </Nav>
-                    {user && <Nav>
+                    {/* {user && <Nav>
                       <Nav.Link href="#link">
                       <FaUserCircle style={{fontSize: "2rem"}}></FaUserCircle>
                       </Nav.Link>
-                    </Nav>}
+                    </Nav>} */}
                   </Navbar.Collapse>
                   {
                     
                     user ?
                     <div>   
-                        <span>{user.email}</span> 
-                        <button onClick={handleLogOut} className="btn btn-xs">Sign out</button>
+                        <Image style={{width:"45px"}} src={user?.photoURL} roundedCircle />
+                        <button onClick={handleLogOut} className="btn btn-xs fw-semibold">Sign out</button>
                     </div> : 
                     <>
                       <Nav.Link href="#link">
-                        <Link className='text-decoration-none p-4' to="/register">Register</Link>
-                      </Nav.Link>
-                      <Nav.Link href="#link">
                           <Link className='text-decoration-none' to="/login">Login</Link>
                       </Nav.Link>
-                    </>
-                    
+                    </> 
                   }
+                
                 </Container>
            </Navbar>
         </Container>

@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Recipes = ({recipe}) => {
     const [buttonVisible, setButtonVisible] = useState(true)
 
+    //toast message
     const notify = () => {
         setButtonVisible(false)
         toast("This recipe added your favourite dish!");

@@ -1,11 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
-  const {createUser, updateUserProfile} = useContext(AuthContext)
-  // console.log(createUser)
+  const {user, createUser, updateUserProfile} = useContext(AuthContext)
+  const [error, setError] = useState('')
+  const [success, setSuccess] = useState('')
 
      const handleRegister = (event) =>{
        event.preventDefault()
@@ -19,20 +21,34 @@ const Register = () => {
        createUser(email, password)
        .then(result =>{
          const loggedUser = result.user
-
-         if(loggedUser){
-          updateUserProfile({
-            displayName,
-            photoURL
-          })
-         }
-
          console.log(loggedUser)
+         setSuccess('User Login successful.')
+         setError(' ')
          form.reset()
+
+        form.reset()
+         updateUserData(result.user, name, photo)
        })
        .catch(error =>{
          console.log(error)
+         setError(error.message)
+
        })
+      }
+
+      //update profile
+      const updateUserData = (user, name, photo) =>{
+        updateProfile(user, {
+          displayName: name,
+          photoURL: photo
+        })
+        .then(() =>{
+          console.log("user name updated")
+        })
+        .catch(error =>{
+          console.log(error)
+        })
+
       }
 
     return (
@@ -66,10 +82,10 @@ const Register = () => {
                     Already Have an Account? <Link to="/login"> Login</Link>
                 </Form.Text>
                 <Form.Text className="text-success">
-
+                  <p>{success}</p>
                 </Form.Text>
                 <Form.Text className="text-danger">
-
+                  {error}
                 </Form.Text>
             </Form>
         </Container>
