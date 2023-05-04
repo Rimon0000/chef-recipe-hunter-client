@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Col, Container, Image, Row } from 'react-bootstrap';
 import review from "../../assets/review.jpg"
 import './Review.css'
 import ReactDOM from 'react-dom';
@@ -15,11 +15,11 @@ const Review = () => {
         <>
         <Container>
             <h2 className='text-center fs-1 fw-semibold m-4'>Our Client Say !!</h2>
-            <div className='review-container gap-5'>
-                <div className='review-img w-50'>
-                    <img className='w-100' src={review} alt="" />
-                </div>
-                <div className='w-50'>
+            <Row className='review-container gap-5'>
+                <Col sm={1} className='review-img w-50'>
+                    <Image src={review} thumbnail />
+                </Col>
+                <Col className='w-50'>
                  <Carousel>
                     <div>
                         <img className='w-100' src={customer1} />
@@ -55,8 +55,8 @@ const Review = () => {
                         </div>
                     </div>
                 </Carousel>
-               </div>
-            </div>
+               </Col>
+            </Row>
         </Container>
         
         </>

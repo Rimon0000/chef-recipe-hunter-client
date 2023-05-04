@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Card, Container, Image, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import { AuthContext } from '../../providers/AuthProvider';
 
@@ -29,18 +29,25 @@ const Header = () => {
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                      <Nav.Link href="#home">
-                        <Link className='text-decoration-none' to="/">Home</Link>
-                      </Nav.Link>
-                      <Nav.Link href="#link">
-                        <Link className='text-decoration-none' to="/blog">Blog</Link>
-                      </Nav.Link>
-                      <Nav.Link href="#link">
-                        <Link className='text-decoration-none' to="/login">Login</Link>
-                      </Nav.Link>
-                      <Nav.Link href="#link">
-                        <Link className='text-decoration-none' to="/register">Register</Link>
-                      </Nav.Link>
+                     <NavLink className={({ isActive }) => (isActive ? 'text-success' : 'default')} 
+                      style={{ margin: "8px",textDecoration: "none",}} 
+                      to="/">Home
+                      </NavLink>
+
+                      <NavLink className={({ isActive }) => (isActive ? 'text-success' : 'default')} 
+                      style={{ margin: "8px",textDecoration: "none",}} 
+                      to="/blog">Blog
+                       </NavLink>
+
+                       <NavLink className={({ isActive }) => (isActive ? 'text-success' : 'default')} 
+                      style={{ margin: "8px",textDecoration: "none",}} 
+                      to="/login">Login
+                       </NavLink>
+
+                       <NavLink className={({ isActive }) => (isActive ? 'text-success' : 'default')} 
+                      style={{ margin: "8px",textDecoration: "none",}} 
+                      to="/register">Register
+                       </NavLink>
                     </Nav>
                   </Navbar.Collapse>
                   {
@@ -51,9 +58,10 @@ const Header = () => {
                         <button onClick={handleLogOut} className="btn btn-xs fw-semibold">Sign out</button>
                     </div> : 
                     <>
-                      <Nav.Link href="#link">
-                          <Link className='text-decoration-none' to="/login">Login</Link>
-                      </Nav.Link>
+                      <NavLink className={({ isActive }) => (isActive ? 'text-success' : 'default')} 
+                      style={{ margin: "8px",textDecoration: "none",}} 
+                      to="/login">Login
+                      </NavLink>
                     </> 
                   }
                 
