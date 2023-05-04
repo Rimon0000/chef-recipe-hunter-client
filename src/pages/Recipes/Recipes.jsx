@@ -4,7 +4,7 @@ import { FaBookmark, FaHandPointRight } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Recipes = ({recipe}) => {
+const Recipes = ({chef}) => {
     const [buttonVisible, setButtonVisible] = useState(true)
 
     //toast message
@@ -14,7 +14,7 @@ const Recipes = ({recipe}) => {
     }
   
     
-    const {id, chef_picture, chef_name,years_of_experience,num_of_recipes,likes, bio, recipes} = recipe
+    const {id, chef_picture, chef_name,years_of_experience,num_of_recipes,likes, bio, recipes} = chef
 
     return (
         <>
@@ -23,7 +23,7 @@ const Recipes = ({recipe}) => {
               <Row>
                 <Col>
                     <Container>
-                    <Card>
+                    <Card style={{height:"478px"}}>
                          <Card.Img variant="top" src="" />
                          <Card.Body>
                            <Card.Title className='fw-bold fs-3'><p>Recipe Name: <span className='fw-semibold'>{recipes[0].title}</span></p></Card.Title>
@@ -48,7 +48,7 @@ const Recipes = ({recipe}) => {
                 </Col>
                 <Col>
                     <Container>
-                    <Card>
+                    <Card style={{height:"478px"}}>
                          <Card.Img variant="top" src="" />
                          <Card.Body>
                            <Card.Title className='fw-bold fs-3'><p>Recipe Name: <span className='fw-semibold'>{recipes[1].title}</span></p></Card.Title>
@@ -72,7 +72,7 @@ const Recipes = ({recipe}) => {
                 </Col>
                 <Col>
                     <Container>
-                    <Card>
+                    <Card style={{height:"478px"}}>
                          <Card.Img variant="top" src="" />
                          <Card.Body>
                            <Card.Title className='fw-bold fs-3'><p>Recipe Name: <span className='fw-semibold'>{recipes[2].title}</span></p></Card.Title>

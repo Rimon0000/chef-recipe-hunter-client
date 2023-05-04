@@ -47,7 +47,7 @@ const Header = () => {
                     
                     user ?
                     <div>   
-                        <Image style={{width:"45px"}} src={user?.photoURL} roundedCircle />
+                        <Image style={{width:"45px"}} src={user?.photoURL} roundedCircle data-toggle="tooltip" data-placement="top" title={user?.displayName} />
                         <button onClick={handleLogOut} className="btn btn-xs fw-semibold">Sign out</button>
                     </div> : 
                     <>

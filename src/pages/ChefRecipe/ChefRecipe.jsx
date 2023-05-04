@@ -6,9 +6,10 @@ import { FaHandPointRight, FaRegThumbsUp } from 'react-icons/fa';
 import Recipes from '../Recipes/Recipes';
 
 const ChefRecipe = () => {
-    const recipe = useLoaderData()
-    const {id, chef_picture, chef_name,years_of_experience,num_of_recipes,likes, bio} = recipe
+    const chef = useLoaderData()
+    const {id, chef_picture, chef_name,years_of_experience,num_of_recipes,likes, bio, recipes} = chef
     // console.log(recife)
+
     return (
         <>
           <Container>
@@ -30,7 +31,7 @@ const ChefRecipe = () => {
              </Card>
         </Container>
           <Container>
-            <Recipes recipe={recipe}></Recipes>
+            <Recipes chef={chef}></Recipes>
           </Container>
         </>
     );

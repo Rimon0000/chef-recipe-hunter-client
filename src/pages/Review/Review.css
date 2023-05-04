@@ -1,3 +1,14 @@
 .review-img{
     border-radius: 8px;
 }
+.review-container{
+    display: flex;
+}
+
+  /* responsive  */
+  @media only screen and (max-width: 576px) {
+    .review-container{
+        flex: none;
+    }
+   
+  }

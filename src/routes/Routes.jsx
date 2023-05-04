@@ -7,6 +7,7 @@ import LoginLayout from "../layouts/LoginLayout";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Blog from "../pages/Blog/Blog";
 
 
 
@@ -31,6 +32,10 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
         {
           path: '/register',
           element: <Register></Register>
+        },
+        {
+          path:'/blog',
+          element:<Blog></Blog>
         }
       ]
     },
