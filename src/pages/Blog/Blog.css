@@ -21,6 +21,13 @@
     font-size: 17px;
 }
 
+.download-btn{
+    right: 123px;
+    position: absolute;
+    top: 89px;
+}
+
+
 /* responsive  */
 @media only screen and (max-width: 576px) {
     .question-container{

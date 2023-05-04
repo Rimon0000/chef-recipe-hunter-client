@@ -1,9 +1,25 @@
 import React from 'react';
 import './Blog.css'
+import { Button } from 'react-bootstrap';
+import { FaDownload } from 'react-icons/fa';
+import Pdf from "react-to-pdf";
 
 const Blog = () => {
+      const ref = React.createRef();
+      const options = {
+        orientation: 'landscape',
+        unit: 'in',
+        format: [13,10]
+      };
+
     return (
-        <div className='question-container'>
+        <>
+           <div>
+           <Pdf targetRef={ref} filename="blog.pdf" options={options}>
+           {({ toPdf }) => <Button onClick={toPdf} className='download-btn' variant="outline-secondary"><FaDownload/></Button>}
+           </Pdf>
+           </div>
+         <div ref={ref} className='question-container'>
             <h1 className='p-7 text-center'>Blog Questions</h1>
           <div className='question'>
             <h4 className='font-bold'>Question 1: Tell us the differences between uncontrolled and controlled components?</h4>
@@ -66,6 +82,7 @@ const Blog = () => {
             </p> 
           </div>
         </div>
+        </>
     );
 };
 
