@@ -36,7 +36,7 @@ import Blog from "../pages/Blog/Blog";
         {
           path:'/blog',
           element:<Blog></Blog>
-        }
+        },
       ]
     },
     {
