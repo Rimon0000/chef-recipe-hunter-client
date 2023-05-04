@@ -47,7 +47,7 @@ import PrivateRoute from "./PrivateRoute";
         {
           path: "/chefrecipe/:id",
           element:<PrivateRoute><ChefRecipe></ChefRecipe></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/chef/${params.id}`)
+          loader: ({params}) => fetch(`https://chef-recipe-hunter-server-rimon0000.vercel.app/chef/${params.id}`)
         }
       ]
     }
