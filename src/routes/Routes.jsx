@@ -8,6 +8,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Blog from "../pages/Blog/Blog";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -45,7 +46,7 @@ import Blog from "../pages/Blog/Blog";
       children:[
         {
           path: "/chefrecipe/:id",
-          element:<ChefRecipe></ChefRecipe>,
+          element:<PrivateRoute><ChefRecipe></ChefRecipe></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/chef/${params.id}`)
         }
       ]

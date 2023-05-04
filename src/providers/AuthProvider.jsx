@@ -42,7 +42,7 @@ const AuthProvider = ({children}) => {
      // //observe auth state change (jate prottekbar notun kore login kora na lage.)
     useEffect(() =>{
        const unsubscribe = onAuthStateChanged(auth, currentUser =>{
-            console.log('auth state changed', currentUser)
+            // console.log('auth state changed', currentUser)
             setUser(currentUser)
             setLoading(false)
         })
@@ -60,7 +60,7 @@ const AuthProvider = ({children}) => {
     //value
     const authInfo = {
         user,
-        // loading,
+        loading,
         createUser,
         signIn,
         googleLogin,

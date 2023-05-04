@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Header from '../Header/Header';
 import { Button, Container, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 
@@ -9,7 +9,15 @@ const Login = () => {
   const {signIn, googleLogin, GithubLogin} = useContext(AuthContext)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
+  // const location = useLocation()
+  // const from = location.state?.from?.pathname || '/';
 
+  const navigate = useNavigate();
+  const location = useLocation()
+  console.log(location)
+
+  const from = location.state?.from?.pathname || '/';
+  console.log(from)
 
   const handleLogin = (event) =>{
     event.preventDefault()
@@ -17,7 +25,7 @@ const Login = () => {
     const email = form.email.value
     const password = form.password.value
     const confirm = form.confirm.value
-    console.log(email, password)
+    // console.log(email, password)
 
     if(password != confirm){
       setError('Your password and confirm password did not matched.')
@@ -35,6 +43,7 @@ const Login = () => {
       setSuccess('User Login successful.')
       setError(' ')
       form.reset()
+      Navigate('/')
     })
     .catch(error =>{
       console.log(error)
