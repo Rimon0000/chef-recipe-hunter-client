@@ -9,14 +9,11 @@ const Login = () => {
   const {signIn, googleLogin, GithubLogin} = useContext(AuthContext)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
-  // const location = useLocation()
-  // const from = location.state?.from?.pathname || '/';
 
   const navigate = useNavigate();
   const location = useLocation()
-  console.log(location)
-
-  const from = location.state?.from?.pathname || '/';
+  // console.log(location)
+  let from = location.state?.from?.pathname || "/";
   console.log(from)
 
   const handleLogin = (event) =>{
@@ -43,7 +40,7 @@ const Login = () => {
       setSuccess('User Login successful.')
       setError(' ')
       form.reset()
-      Navigate('/')
+      navigate(from, { replace: true })
     })
     .catch(error =>{
       console.log(error)
@@ -57,9 +54,14 @@ const Login = () => {
     .then(result =>{
       const loggedUser = result.user 
       console.log(loggedUser)
+      setSuccess('User Login successful.')
+      setError(' ')
+      navigate(from, { replace: true })
+
     })
     .catch(error =>{
       console.log(error)
+      setError(error.message)
     })
   }
 
@@ -69,9 +71,13 @@ const Login = () => {
     .then(result =>{
         const loggedInUser = result.user
         console.log(loggedInUser)
+      setSuccess('User Login successful.')
+      setError(' ')
+      navigate(from, { replace: true })
     })
     .catch(error =>{
         console.log(error)
+      setError(error.message)
     })
 }
 
