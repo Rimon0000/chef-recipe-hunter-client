@@ -17,7 +17,7 @@ const Recipes = ({recipe}) => {
     return (
         <>
           <div>
-              <Card style={{height:"501px"}}>
+              <Card style={{height:"549px"}}>
                    <Card.Img variant="top" src="" />
                    <Card.Body>
                      <Card.Title className='fw-bold fs-3'><p>Recipe Name: <span className='fw-semibold'>{title}</span></p></Card.Title>
