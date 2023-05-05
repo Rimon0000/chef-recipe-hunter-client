@@ -1,0 +1,13 @@
+.chefRecipe-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+  /* responsive  */
+  @media only screen and (max-width: 576px) {
+    .chefRecipe-container{
+        grid: none;
+    }
+   
+  }

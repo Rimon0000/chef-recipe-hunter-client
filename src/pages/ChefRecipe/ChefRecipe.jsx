@@ -4,6 +4,7 @@ import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { Card, Container } from 'react-bootstrap';
 import { FaHandPointRight, FaRegThumbsUp } from 'react-icons/fa';
 import Recipes from '../Recipes/Recipes';
+import './ChefRecipe.css'
 
 const ChefRecipe = () => {
     const chef = useLoaderData()
@@ -14,7 +15,7 @@ const ChefRecipe = () => {
         <>
           <Container>
             <Card>
-             <Card.Img variant="top" src={chef_picture} />
+             <Card.Img style={{height:"600px"}} variant="top" src={chef_picture} />
              <Card.Body>
                <Card.Title className='fw-bold fs-1'>{chef_name}</Card.Title>
                <Card.Text className='fw-semibold'>
@@ -31,7 +32,12 @@ const ChefRecipe = () => {
              </Card>
         </Container>
           <Container>
-            <Recipes chef={chef}></Recipes>
+          <h2 className='text-center fx-bold fs-1 m-4'>Special Recipes</h2>
+            <div className='chefRecipe-container'>
+            {
+              recipes.map(recipe => <Recipes recipe={recipe}></Recipes>)
+            }
+            </div>
           </Container>
         </>
     );
