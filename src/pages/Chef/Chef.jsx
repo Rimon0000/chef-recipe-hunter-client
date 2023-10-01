@@ -15,7 +15,7 @@ const Chef = ({chef}) => {
                </LazyLoad>
                <Card.Body>
                  <Card.Title className='fw-bold fs-3'>{chef_name}</Card.Title>
-                 <Card.Text className='d-flex fw-semibold pt-2 gap-5'>
+                 <Card.Text className='d-flex fw-semibold pt-2 gap-3'>
                    <div>
                        <p className='fw-semibold'>Experience: {years_of_experience} years</p>
                        <p>Number of Recipes: {num_of_recipes}</p>
