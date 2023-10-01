@@ -6,9 +6,10 @@ import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
-import customer1 from "../../assets/customer1.jpg"
-import customer2 from "../../assets/customer2.jpg"
-import customer3 from "../../assets/customer3.jpg"
+import customer1 from "../../assets/customer/customer1.jpg"
+import customer2 from "../../assets/customer/customer2.jpg"
+import customer3 from "../../assets/customer/customer3.jpg"
+
 
 const Review = () => {
     return (

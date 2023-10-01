@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
-import about1 from "../../assets/about-1.jpg"
-import about2 from "../../assets/about-2.jpg"
-import about3 from "../../assets/about-3.jpg"
-import about4 from "../../assets/about-4.jpg"
+import about1 from "../../assets/about/about-1.jpg"
+import about2 from "../../assets/about/about-2.jpg"
+import about3 from "../../assets/about/about-3.jpg"
+import about4 from "../../assets/about/about-4.jpg"
+
 
 const About = () => {
     return (

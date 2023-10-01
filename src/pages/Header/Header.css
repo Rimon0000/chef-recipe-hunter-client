@@ -1,0 +1,15 @@
+.nav-display{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img{
+    width: 75px;
+    height: 60px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.nav-list{
+    margin-right: 50px;
+}
