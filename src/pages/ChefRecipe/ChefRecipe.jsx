@@ -13,10 +13,10 @@ const ChefRecipe = () => {
 
     return (
         <>
-          <Container>
+          <Container className='mt-5'>
             <Card>
-             <Card.Img style={{height:"600px"}} variant="top" src={chef_picture} />
-             <Card.Body>
+             <Card.Img className='w-75 mx-auto'  variant="top" src={chef_picture} />
+             <Card.Body className=' w-75 mx-auto'>
                <Card.Title className='fw-bold fs-1'>{chef_name}</Card.Title>
                <Card.Text className='fw-semibold'>
                  {bio}
