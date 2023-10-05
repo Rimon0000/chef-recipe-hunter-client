@@ -5,6 +5,7 @@ import "./Home.css"
 import Banner from '../Banner/Banner';
 import Review from '../Review/Review';
 import About from '../About/About';
+import Reservation from '../Reservation/Reservation';
 
 const Home = () => {
     const [chefs, setChefs] = useState([])
@@ -32,6 +33,7 @@ const Home = () => {
         </Container>
         <Review></Review>
         <About></About>
+        <Reservation></Reservation>
         </>
     );
 };
