@@ -9,13 +9,13 @@ const Menus = () => {
     const [showSeeAllButton, setShowSeeAllButton] = useState(true);
 
     useEffect(() =>{
-        fetch("http://localhost:5000/menus")
+        fetch("https://chef-recipe-hunter-server-rimon0000.vercel.app/menus")
         .then(res => res.json())
         .then(data => setMenus(data.slice(0, 4)))
     },[])
 
     const seeAllHandler = () =>{
-            fetch("http://localhost:5000/menus")
+            fetch("https://chef-recipe-hunter-server-rimon0000.vercel.app/menus")
             .then(res => res.json())
             .then(data => setMenus(data))
             setShowSeeAllButton(false)
