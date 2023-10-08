@@ -6,6 +6,7 @@ import Banner from '../Banner/Banner';
 import Review from '../Review/Review';
 import About from '../About/About';
 import Reservation from '../Reservation/Reservation';
+import Menus from '../Menus/Menus';
 
 const Home = () => {
     const [chefs, setChefs] = useState([])
@@ -21,7 +22,7 @@ const Home = () => {
         <>
         <Banner></Banner>
         <Container className='mt-4'>
-            <h3 className='text-center mb-4 fs-1'>Our Chef's</h3>
+            <h3 className='text-center fs-1 fw-semibold border-bottom border-primary w-25 mx-auto font-bold my-5 pt-5'>Our Chef's</h3>
             <div className='chef-container'>
                 {
                     chefs.map(chef => <Chef
@@ -31,6 +32,7 @@ const Home = () => {
                 }
             </div>
         </Container>
+        <Menus></Menus>
         <Review></Review>
         <About></About>
         <Reservation></Reservation>

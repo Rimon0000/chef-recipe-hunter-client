@@ -9,7 +9,7 @@ import about4 from "../../assets/about/about-4.jpg"
 const About = () => {
     return (
         <Container className='mt-5'>
-            <h1 className='text-center fs-1 fw-semibold m-4'>About Us</h1>
+            <h1 className='text-center fs-1 fw-semibold border-bottom border-primary w-25 mx-auto font-bold my-5'>About Us</h1>
             <Row sm={1} lg={2}>
                <Col sm={1} className='d-flex gap-1 mt-2'>
                <div>
