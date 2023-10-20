@@ -15,7 +15,7 @@ const Review = () => {
     return (
         <>
         <Container>
-            <h2 className='text-center fs-1 fw-semibold border-bottom border-primary w-50 mx-auto font-bold my-5 pt-5 pb-2'>Our Client Say !!</h2>
+            <h2 className='text-center fs-1 fw-semibold border-bottom border-primary w-50 mx-auto font-bold my-5 pb-2'>Our Client Say !!</h2>
             <Row className='review-container gap-5'>
                 <Col sm={1} className='review-img w-50'>
                     <Image src={review} thumbnail />

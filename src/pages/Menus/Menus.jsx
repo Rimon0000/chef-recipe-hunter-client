@@ -23,7 +23,7 @@ const Menus = () => {
 
     return (
         <Container>
-            <h2 className='text-center fs-1 fw-semibold border-bottom border-primary w-25 mx-auto font-bold mt-5 pt-5'>Our Menus</h2>
+            <h2 className='text-center fs-1 fw-semibold border-bottom border-primary w-25 mx-auto font-bold mt-5'>Our Menus</h2>
             <p className='text-center fs-5 fw-semibold'>Eat Your Favourite Food</p>
             <div className='mt-5'>
                 {

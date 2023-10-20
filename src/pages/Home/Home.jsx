@@ -22,7 +22,7 @@ const Home = () => {
     return (
         <>
         <Banner></Banner>
-        <Container className='mt-4'>
+        <Container>
             <h3 className='text-center fs-1 fw-semibold border-bottom border-primary w-25 mx-auto font-bold my-5 pt-5'>Our Chef's</h3>
             <div className='chef-container'>
                 {

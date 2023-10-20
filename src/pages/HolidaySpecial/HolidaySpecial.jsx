@@ -1,5 +1,4 @@
 import React from 'react';
-import img1 from "../../assets/foodMenu/biriyani.jpg"
 import img2 from "../../assets/foodMenu/elish.jpg"
 import img3 from "../../assets/foodMenu/kala-buna.jpg"
 import img4 from "../../assets/foodMenu/mejban.jpg"
@@ -13,7 +12,7 @@ import "./HolidaySpecial.css"
 const HolidaySpecial = () => {
     return (
         <Container>
-            <h2 className='text-center fs-1 fw-semibold border-bottom border-primary w-50 mx-auto font-bold my-5 pt-5 pb-2'>Holiday Special Menu</h2>
+            <h2 className='text-center fs-1 fw-semibold border-bottom border-primary w-50 mx-auto font-bold my-5 pb-2'>Holiday Special Menu</h2>
         <Row className='px-4'>
             <Col>
                 <Card>
