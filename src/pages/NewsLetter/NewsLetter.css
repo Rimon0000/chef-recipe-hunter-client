@@ -1,0 +1,6 @@
+.newsletter{
+    background-image: url("../../assets//newsLetter/news.jpg");
+    background-size: cover; 
+    background-attachment: fixed;
+    width: 100%;
+}

@@ -4,7 +4,7 @@ import { Container, Form } from 'react-bootstrap';
 
 const Reservation = () => {
     return (
-        <Container className='mb-5'>
+        <Container>
             <h2 className='text-center fs-1 fw-semibold border-bottom border-primary w-25 mx-auto font-bold mt-5'>Reservation</h2>
             <p className='text-center fs-5 fw-semibold'>Book Your Table</p>
             

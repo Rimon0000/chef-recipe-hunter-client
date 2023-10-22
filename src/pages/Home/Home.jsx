@@ -8,6 +8,7 @@ import About from '../About/About';
 import Reservation from '../Reservation/Reservation';
 import Menus from '../Menus/Menus';
 import HolidaySpecial from '../HolidaySpecial/HolidaySpecial';
+import NewsLetter from '../NewsLetter/NewsLetter';
 
 const Home = () => {
     const [chefs, setChefs] = useState([])
@@ -38,6 +39,7 @@ const Home = () => {
         <Review></Review>
         <About></About>
         <Reservation></Reservation>
+        <NewsLetter></NewsLetter>
         </>
     );
 };
