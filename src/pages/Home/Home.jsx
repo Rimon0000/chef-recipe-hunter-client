@@ -9,6 +9,10 @@ import Reservation from '../Reservation/Reservation';
 import Menus from '../Menus/Menus';
 import HolidaySpecial from '../HolidaySpecial/HolidaySpecial';
 import NewsLetter from '../NewsLetter/NewsLetter';
+import Article from '../Article/Article';
+import PopularRecipe from '../PopularRecipe/PopularRecipe';
+import Partner from '../Partner/Partner';
+
 
 const Home = () => {
     const [chefs, setChefs] = useState([])
@@ -36,9 +40,12 @@ const Home = () => {
         </Container>
         <Menus></Menus>
         <HolidaySpecial></HolidaySpecial>
+        <PopularRecipe></PopularRecipe>
         <Review></Review>
         <About></About>
         <Reservation></Reservation>
+        <Article></Article>
+        <Partner></Partner>
         <NewsLetter></NewsLetter>
         </>
     );

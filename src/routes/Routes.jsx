@@ -9,6 +9,8 @@ import Register from "../pages/Register/Register";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Blog from "../pages/Blog/Blog";
 import PrivateRoute from "./PrivateRoute";
+import PopularRecipe from "../pages/PopularRecipe/PopularRecipe";
+import RecipeDetails from "../pages/PopularRecipe/RecipeDetails";
 
 
 
@@ -37,6 +39,20 @@ import PrivateRoute from "./PrivateRoute";
         {
           path:'/blog',
           element:<Blog></Blog>
+        },
+        {
+          path:"/recipes",
+          element: <PopularRecipe></PopularRecipe>
+        },
+        {
+          path:"/recipes/:id",
+          element: <RecipeDetails></RecipeDetails>,
+          // loader: ({params}) => fetch(`http://localhost:5000/recipes/${params.id}`)
+          loader: ({params}) => {
+            const id = params.Id
+            const data = fetch('https://chef-recipe-hunter-server-rimon0000.vercel.app/recipes')
+            return data
+          }
         },
       ]
     },

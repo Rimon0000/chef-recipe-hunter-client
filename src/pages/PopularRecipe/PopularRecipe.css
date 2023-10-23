@@ -1,0 +1,15 @@
+.recipe-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-right: 35px;
+    margin-left: 35px;
+}
+
+  /* responsive  */
+  @media only screen and (max-width: 576px) {
+    .recipe-container{
+        grid: none;
+    }
+   
+  }
