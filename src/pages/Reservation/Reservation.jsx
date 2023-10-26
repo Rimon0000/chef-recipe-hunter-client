@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Reservation.css"
-import { Container, Form } from 'react-bootstrap';
+import { Button, Container, Form } from 'react-bootstrap';
 
 const Reservation = () => {
     return (
@@ -26,10 +26,11 @@ const Reservation = () => {
                 <Form.Label className='mt-1'>Number of Guest:</Form.Label>
                 <Form.Control type="number" placeholder="Guest No:" />
               </Form.Group>
-              <Form.Group className="mb-2 pb-4" controlId="exampleForm.ControlTextarea1">
+              <Form.Group className="mb-4" controlId="exampleForm.ControlTextarea1">
                 <Form.Label>message</Form.Label>
                 <Form.Control as="textarea" placeholder="message" rows={3} />
               </Form.Group>
+              <Button className='mb-4' variant="outline-primary" type="submit">Submit</Button>
             </Form>
             </div>
 
